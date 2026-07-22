@@ -1,0 +1,7 @@
+pandas          # Einlesen und Verarbeiten von CSV/Excel-Daten (ab Phase 2)
+numpy           # numerische Grundoperationen
+scipy           # statistische Tests und Regression (t-Test, Chi^2, Korrelation, lineare Regression)
+streamlit       # Web-Oberflaeche (ab Phase 2)
+pytest          # Testframework
+python-dotenv   # liest API-Keys sicher aus einer .env-Dpyteatei (ab Phase 3)
+google-genai   # offizielles Google-SDK fuer Gemini, inkl. Function-Calling
