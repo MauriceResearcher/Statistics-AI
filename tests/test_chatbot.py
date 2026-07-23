@@ -105,3 +105,18 @@ def test_unknown_column_returns_error_dict_not_exception():
     tools = _tools_by_name()
     result = tools["run_simple_regression"]("does_not_exist", "income")
     assert "error" in result
+
+
+def test_tools_normalize_messy_column_names():
+    # Models sometimes wrap arguments in stray quotes/whitespace - the
+    # tools should clean that up automatically rather than failing.
+    tools = _tools_by_name()
+    result = tools["get_descriptive_summary"]("  'age' ")
+    assert "error" not in result
+
+
+def test_run_two_sample_t_test_with_messy_input():
+    tools = _tools_by_name()
+    result = tools["run_two_sample_t_test"](' income ', '"city"', ' Berlin ', 'Hamburg')
+    assert "error" not in result
+    assert "p_value" in result
