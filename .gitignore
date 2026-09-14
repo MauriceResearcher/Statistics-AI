@@ -1,4 +1,19 @@
-*.env
-*.venv/
-*__pycache__/
-*.idea/
+# Umweltspezifische Dateien & Secrets
+.env
+.env.*
+!.env.example
+
+# Virtuelle Umgebungen & IDE
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Daten & temporäre Testdateien
+*.csv
+*.xlsx
+*.xls
