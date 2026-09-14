@@ -1,0 +1,15 @@
+[project]
+name = "statistik-api"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "google-genai>=2.23.0",
+    "numpy>=2.5.3",
+    "pandas>=3.0.5",
+    "pytest>=9.1.1",
+    "python-dotenv>=1.2.3",
+    "scipy>=1.18.1",
+    "streamlit>=1.63.0",
+]
