@@ -47,7 +47,7 @@ if not _check_password():
     st.stop()
 
 st.title("📊 Statistik Tool")
-st.write("Lade eine CSV- oder Excel-Datei hoch und sprich mit dem Chatbot ueber deine Daten.")
+st.write("Lade eine CSV- oder Excel-Datei hoch und sprich mit dem Chatbot über deine Daten.")
 
 uploaded_file = st.file_uploader("Datei auswaehlen", type=["csv", "xlsx", "xls"])
 
@@ -63,7 +63,7 @@ if uploaded_file is not None:
 
     st.success(f"'{uploaded_file.name}' geladen: {df.shape[0]} Zeilen, {df.shape[1]} Spalten.")
 
-    with st.expander("Vorschau & Spaltenuebersicht"):
+    with st.expander("Vorschau & Spaltenübersicht"):
         st.dataframe(df.head(20))
         col_left, col_right = st.columns(2)
         with col_left:

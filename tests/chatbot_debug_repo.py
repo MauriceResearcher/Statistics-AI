@@ -13,7 +13,7 @@ from google.genai import types
 load_dotenv()
 api_key = os.environ["GEMINI_API_KEY"]
 
-MODEL = "gemini-3.1-flash-lite"  # bewusst NICHT die Lite-Variante, zum Testen
+MODEL = "gemini-3.1-flash-lite"
 
 
 def add(a: int, b: int) -> int:
@@ -34,5 +34,5 @@ chat = client.chats.create(
     config=types.GenerateContentConfig(tools=[add]),
 )
 
-response = chat.send_message("Was ist 7 plus 5? Nutze dafuer das verfuegbare Tool.")
+response = chat.send_message("Was ist 7 plus 5? Nutze dafür das verfügbare Tool.")
 print("Antwort:", response.text)
